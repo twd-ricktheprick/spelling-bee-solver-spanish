@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Bee Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐝 Spelling Bee Solver</h1>
+        
+        <div class="input-section">
+            <label>Letra obligatoria (central):</label>
+            <input type="text" id="centerLetter" maxlength="1" placeholder="Ej: A">
+            
+            <label>Otras 6 letras:</label>
+            <input type="text" id="otherLetters" maxlength="6" placeholder="Ej: BCDEFG">
+            
+            <button onclick="solve()">Buscar palabras</button>
+        </div>
+        
+        <!-- Palabra con letra obligatoria -->
+        <div class="results-section mandatory">
+            <h2>⭐ Palabra con letra obligatoria</h2>
+            <div id="mandatoryWord" class="word-container"></div>
+        </div>
+        
+        <!-- Resto de palabras -->
+        <div class="results-section optional">
+            <h2>📚 Otras palabras válidas</h2>
+            <div id="otherWords" class="word-container"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
